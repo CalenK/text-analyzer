@@ -62,3 +62,33 @@ Code:
 const text = "Red! Red. I like red, green, and yellow.";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Describe: offensiveWording()
+
+Test: "It should remove a word that is offensive."
+Code:
+const text = "Man that's some crazy zoinks."
+const word = "zoinks"
+offensiveWording(word, text);
+Expected Output: 0
+
+Test: "It should remove words that are offensive."
+Code:
+const text = "Holy zoinks that muppeteer is causing quite the trouble.";
+const word = "muppeteer";
+offensiveWording(word, text);
+Expected Output: 0
+
+Test: "It should remove the most offensive word."
+Code:
+const text = "Mighty zoinks look at that big biffaroni.";
+const word = "biffaroni";
+offensiveWording(word, text);
+Expected Output: 0
+
+Test: "It should remove the offensive word."
+Code:
+const text = "Hey let's do a lil loopdaloop for fun.";
+const word = "loopdaloop";
+offensiveWording(word, text);
+Expected Output: 0

@@ -22,3 +22,14 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+function offensiveWording(word, text) {
+  const textArray = text.split(" ");
+  let wordCount = 0;
+  textArray.forEach(function(element) {
+    if (element.remove().includes(word.remove())) {
+      wordCount--;
+    }
+  });
+  return wordCount;
+}
