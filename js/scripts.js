@@ -52,6 +52,9 @@ function boldPassage(word, text) {
 }
 
 function offensiveWording(word, text) {
+  if (isEmpty(word)) {
+    return 0;
+  }
   const textArray = text.split(" ");
   let wordCount = 0;
   textArray.forEach(function(element) {
