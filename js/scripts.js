@@ -73,14 +73,15 @@ function handleFormSubmission(event) {
   const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
   document.getElementById("total-count").innerText = wordCount;
   document.getElementById("selected-count").innerText = occurrencesOfWord;
-  let boldPassage = boldPassage(word, passage);
-  if (boldPassage) {
-    document.querySelector("div#bolded-passage").append(boldPassage);
+  let boldedPassage = boldPassage(word, passage);
+  console.log(boldedPassage);
+  if (boldedPassage) {
+    document.querySelector("div#bolded-passage").append(boldedPassage);
   } else {
     document.querySelector("div#bolded-passage").innerText = null;
   }
 }
 
 window.addEventListener("load", function() {
-  document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
+  document.querySelector("form#word-container").addEventListener("submit", handleFormSubmission);
 });
