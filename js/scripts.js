@@ -74,7 +74,6 @@ function handleFormSubmission(event) {
   document.getElementById("total-count").innerText = wordCount;
   document.getElementById("selected-count").innerText = occurrencesOfWord;
   let boldedPassage = boldPassage(word, passage);
-  console.log(boldedPassage);
   if (boldedPassage) {
     document.querySelector("div#bolded-passage").append(boldedPassage);
   } else {
