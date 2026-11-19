@@ -122,3 +122,10 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
+
+Test: "It should put part of a word that matches another word in strong tags"
+Code:
+const word = "pen";
+const text = "happen"
+boldPassage(word, text);
+Expected Output: <p>hap<strong>pen</strong></p>
