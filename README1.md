@@ -12,6 +12,8 @@
 * Git
 * Javascript
 ---
+[Project README](README2.md)
+---
 ## _Description_
 
 #### _This is a webpage where the user can type in a set of text and see how many words is in it and has the option to see how many time they used a certain word as well._
