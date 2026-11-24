@@ -37,10 +37,14 @@ function boldPassage(word, text) {
   const p = document.createElement("p");
   let textArray = text.split(" ");
   textArray.forEach(function(element, index) {
-    if (word === element) {
+    const indexOfWord = element.indexOf(word);
+    if (indexOfWord > -1) {
+      const endIndex = word.length;
+      const sub = element.substring(indexOfWord, endIndex);
       const bold = document.createElement("strong");
-      bold.append(element);
+      bold.append(sub);
       p.append(bold);
+      p.append(element.substring(endIndex));
     } else {
       p.append(element);
     }
